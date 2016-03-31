@@ -18,7 +18,7 @@ $origo['main'] = <<<EOD
 <h4>Vilken utvecklingsmiljö använder du?</h4>
 <p>Jag använder samma miljö som i kursen "htmlphp", där jag använder operativsystemet
 Windows 7 med cygwin som terminal för git och dbwebb-kommandon.
-<br/>Jag använder Atom som editor, där jag numera har installerat ett antal plug-ins som
+<br/>Jag använder Atom som editor, där jag numera har installerat ett antal plug-in som
 gör den lätt att arbeta med. Jag har mappat snabbkommandona så att Atom mycket liknar
 Eclipse, så jag blir det lättare när jag sedan använder Eclipse som java-editor.
 <br/>För att se resultatet, använder jag mig av webbläsarna Firefox med Firebug och
@@ -47,23 +47,29 @@ kännas bättre nu när strukturen börjar sätta sig. Jag vet också från arbe
 det är skillnad på små och stora strukturer. Att det kan kännas lite väl mycket, när
 kodmängden är liten, men utan bra struktur när koden växer kan bli en mardröm.
 <br/>Jag höll mig till största delen till strukturen som den som fanns i övningen.
-Jag kände att jag inte ville avika allt förmycket, då det kanske ställer till det
-i kommande övningar. Jag flyttade dock initeringen av huvudet och footer till
+Jag kände att jag inte ville avvika allt förmycket, då det kanske ställer till det
+i kommande övningar. Jag flyttade dock initieringen av huvudet och footer till
 config-filen, så jag inte behövde upprepa koden i alla sidokontroll-filer. Jag använde
 också en annan variant för att markera vilken sida jag är på i menyn, där jag
-använder mig av miljövariablen server.</p>
+använder mig av miljövariabeln server.</p>
 
 <h4>Gick det bra att inkludera source.php? Gjorde du det som en modul i ditt Anax?</h4>
-<p>Ja, det gick bra. Jag gjorde som det stod i beskrivningen och allt gick bra.
-Den finns nu som en modul i Orion.</p>
+<p>Ja, det gick bra. Jag följde bara beskrivningen och allt gick bra. Den finns nu som
+en modul i Orion. Jag gjorde bara en liten ändring i CSS-filen, så även den sidan kan
+visas i mindre enheter.</p>
 
 <h4>Gjorde du extrauppgiften med GitHub?</h4>
-<p>Ja, det gjorde jag. Jag har arbetat med Git en hel del och jag tycker det är ett
-smidigt verktyg att arbeta med. Skulle ens dator krascha, så är det bra att koden
-finns sparad, speciellt om man arbetar med slutprojektet. Förra projektet i kursen
-"htmlphp" så sparade jag flitigt på studentservern istället. Verktyget är också bra
-om man behöver gå tillbaka till en tidigare revision om något har blivit fel eller
-man vill byta strategi.</p>
+<p>Ja, det gjorde jag. Jag har arbetat med Git en hel del i mitt arbete och jag tycker
+det är ett smidigt verktyg att arbeta med. Genom att checka in kod ofta, så kan man få
+bra kontroll över koden. Speciellt om det är någon del av koden som har slutat att
+fungera, så kan man lättare leta upp vilken ändring som gör att det går fel. Att lägga
+upp koden på GitHub är ett sätt att spara sin kod som en extra säkerhet om ens dator
+skulle krascha. Jag funderade hur många som sparade sin kod på ett säkert sätt när man
+gjorde slutprojektet i htmlphp-kursen? Om man inte gjorde det, så hade det inte varit
+kul om datorn hade kraschat när man har arbetat med koden under en längre tid.
+<br/>Git är också vanligt förekommande ute i arbetslivet, så det är bra att lära sig
+att använda Git eller hålla kunskaperna uppdaterade.
+</p>
 
 <h2>Kmom02</h2>
 <p>Är ännu inte redovisad.</p>
