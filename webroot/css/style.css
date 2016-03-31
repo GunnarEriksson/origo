@@ -1,0 +1,172 @@
+/**
+ * General elements
+ */
+ html {
+     overflow-y: scroll;
+ }
+
+body {
+    color: #333;
+    font-family: arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/**
+ * Layout of the main page elements
+ */
+#wrapper {
+    margin: 0 auto;
+    padding: 10px;
+    width: 980px;
+}
+
+
+/**
+ * Layout for header
+ */
+#header {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.sitetitle {
+    font-size: 48px;
+    left: 130px;
+    position: absolute;
+    top: 6px;
+}
+
+.siteslogan {
+    color: #666;
+    font-style: italic;
+    left: 130px;
+    position: absolute;
+    top: 65px;
+}
+
+
+/**
+ * Layout for navigation bar
+ */
+.navbar {
+    border-radius: 7px;
+    background: #396a2f;
+    background: linear-gradient(#396a2f, #55a046);
+    display: block;
+    overflow: auto;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.navbar a {
+    background: #396a2f;
+    background: linear-gradient(#396a2f, #55a046);
+    color: #fff;
+    display: inline-block;
+    margin-left: .5em;
+    padding: .5em;
+}
+
+.navbar a:hover {
+    color: #f5a06e;
+}
+
+.navbar .selected {
+    color: #f5a06e;
+}
+
+
+/**
+ * Layout for main
+ */
+#main {
+    min-height: 20em;
+}
+
+
+/**
+ * Layout for footer
+ */
+#footer {
+    border-top: 1px solid #396a2f;
+    margin-top: 40px;
+    padding-top: 15px;
+}
+
+.sitefooter {
+    color: #666;
+}
+
+.sitefooter a {
+    color: #55a046;
+}
+
+.sitefooter a:visited {
+    color: #396a2f;
+}
+
+.sitefooter a:hover {
+    color: #ffa31a;
+}
+
+
+/**
+ * Layout for me page
+ */
+.me-picture {
+    float: right;;
+	padding-left: 1em;
+    width: 250px;
+}
+
+
+/**
+ * Responsive layout
+ */
+@media (max-width: 1050px) {
+    #wrapper {
+      width: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Layout for header */
+    .sitetitle {
+        font-size: 40px;
+    }
+
+    .siteslogan {
+        font-size: .8em;
+    }
+
+
+    /* Layout for me-page */
+    .me-picture {
+        width: 200px;
+    }
+}
+
+
+/**
+ * Responsive layout
+ */
+@media (max-width: 500px) {
+    /* Layout for header */
+    .sitetitle {
+        font-size: 28px;
+    }
+
+    .siteslogan {
+        font-size: .5em;
+    }
+
+
+    /* Layout for me-page */
+    .me-picture {
+        width: 120px;
+    }
+}
