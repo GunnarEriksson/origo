@@ -119,5 +119,5 @@ function selectedPage($fileName)
  * The footer for the webpages.
  */
 $origo['footer'] = <<<EOD
-<footer><span class='sitefooter'>Copyright (c) Gunnar Eriksson | <a href='https://github.com/mosbth/Origo-base'>Origo på GitHub</a> | <a href='http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance'>Unicorn</a></span></footer>
+<footer><span class='sitefooter'>Copyright (c) Gunnar Eriksson | <a href='https://github.com/GunnarEriksson/origo'>Origo på GitHub</a> | <a href='http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance'>Unicorn</a></span></footer>
 EOD;
