@@ -43,7 +43,7 @@ $origo['main'] = <<<EOD
 <p>I tärningsspelet 100 gäller det att samla ihop poäng för att komma först till 100.
 Du kastar i varje omgång en tärning tills du väljer att stanna och spara poängen eller
 det dyker upp en etta och du förlorar alla poäng som du inte har sparat i rundan.</p>
-<p>{$diceLogic->getDice()}</p>
+{$diceLogic->getDice()}
 <p>Poäng: {$diceLogic->getAccumulatedScore()}</p>
 <p>Sparade poäng: {$diceLogic->getSavedScore()}</p>
 <p>Meddelande: {$diceLogic->getMessage()}</p>

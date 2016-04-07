@@ -45,9 +45,9 @@
     width: 32px;
 }
 
-.dice > li.dice-1 { background-position: -160px 0px; }
-.dice > li.dice-2 { background-position: -128px 0px; }
-.dice > li.dice-3 { background-position:  -96px 0px; }
-.dice > li.dice-4 { background-position:  -64px 0px; }
-.dice > li.dice-5 { background-position:  -32px 0px; }
-.dice > li.dice-6 { background-position:    0px 0px; }
+.dice > li.dice-1 { background-position: -160px 0; }
+.dice > li.dice-2 { background-position: -128px 0; }
+.dice > li.dice-3 { background-position:  -96px 0; }
+.dice > li.dice-4 { background-position:  -64px 0; }
+.dice > li.dice-5 { background-position:  -32px 0; }
+.dice > li.dice-6 { background-position:    0 0; }
