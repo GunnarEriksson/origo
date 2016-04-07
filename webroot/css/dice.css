@@ -36,7 +36,7 @@
 }
 
 .dice > li {
-    background: url(../img/dice-faces.jpg) no-repeat;
+    background: url(../img/dice/dice-faces.jpg) no-repeat;
     border-radius: 5px;
     display: inline-block;
     height: 32px;

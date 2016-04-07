@@ -72,6 +72,7 @@ EOD;
  $menu = array(
    'me'  => array('text'=>'Hem',  'url'=>'me.php'),
    'dice'  => array('text'=>'Tärningsspel',  'url'=>'dice.php'),
+   'calendar'  => array('text'=>'Kalender',  'url'=>'calendar.php'),
    'report' => array('text'=>'Redovisning', 'url'=>'report.php'),
    'source'  => array('text'=>'Källkod',  'url'=>'source.php'),
  );

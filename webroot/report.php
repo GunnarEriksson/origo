@@ -72,7 +72,78 @@ att använda Git eller hålla kunskaperna uppdaterade.
 </p>
 
 <h2>Kmom02</h2>
-<p>Är ännu inte redovisad.</p>
+<h4>Hur väl känner du till objektorienterade koncept och programmeringssätt?</h4>
+<p>Jag har arbetat med både C++ och Java i många år, så koncepten är bekanta. Jag valde
+dock att hålla allt enkelt så jag implementerade inga avancerade designmönster för att
+göra kopplingarna mellan klasserna lösare.</p>
+
+<h4>Jobbade du igenom oophp20-guiden eller skumläste du den?</h4>
+<p>Jag jobbade igenom guiden grundligt då era guider ger en bra start i programspråket
+PHP och tar upp det man behöver för stunden. Jag behöver dessutom nöta in PHP-syntaxen.
+Problemet för mig när det gäller PHP-syntaxen är skillnaderna mot Java-syntaxen. I PHP
+behöver man inte deklarera typen för en variabel, men det tar Java igen senare genom
+att syntaxen är enklare. Jag vet inte hur många gånger jag glömde this-pekaren, ett
+dollartecken efter piloperatorn eller self-ordet före en konstant. Det kan bli knepigt
+ibland när det inte blir ett syntaxfel utan att PHP-kompilatorn tror att man tilldelar
+en lokal variabel istället för en instansvariabel. Jag har dock lärt mig känna igen
+felen nu.</p>
+
+<h4>Berätta om hur du löste uppgiften med tärningsspelet 100, hur tänkte du och hur gjorde
+du, hur organiserade du din kod?</h4>
+<p>Jag använde mig av strukturen från övningen. Jag har en Dice-klass som skapar tärningen
+och slumpar fram ett värde tärningen ska visa. DiceImage-klassen ärver Dice-klassen och gör
+att man kan visa en tärning på ett smidigt sätt via en bild och CSS.</p>
+
+<p>Klassen DiceLogic är motorn i spelet och fungerar också som ett gränssnitt mellan
+sidokontrollern och tärningen. Logiken sköter anropen från sidokontrollen och anropar i sin
+tur DiceImage. Logiken håller också redan på poängen, när poäng som inte har sparats förloras
+och när en spelare har vunnit.</p>
+
+<p>Sidokontrollern dice.php innehåller det mesta av HTML-koden och har tre knappar som anropar
+sidan med GET. DiceLogic-objektet sparas i sessionen om den inte redan finns där för att man
+ska kunna gå tillbaka och spela vidare. Vill man spela ett nytt spel, rensas sessionen från
+DiceLogic-objektet så ett nytt objekt kan skapas igen.</p>
+
+<p>I min version av spelet kan man bara spela mot sig själv, eftersom jag valde att göra
+kalendern också. Skulle jag ha utökat spelet så fler spelare (även datorn), så hade jag skapat
+en Player-klass också. Sedan hade logiken fått spara spelarna i en array och arbetat mot den
+klassen i stället för DiceImage-klassen.</p>
+
+<h4>Berätta om hur du löste uppgiften med Månadens Babe, hur tänkte du och hur gjorde du, hur
+organiserade du din kod?</h4>
+<p>Jag har delat upp kalendern i flera klasser. Längst ned finns klassen CalendarDay som
+hanterar en dag och innehåller information om vilket datum dagen har och om det finns någon
+övrig information. I mitt fall använder jag den till att spara om klassen tillhör en annan
+månad än den som visas.</p>
+
+<p>Nästa klass är CalendarWeek. Den klassen ansvarar för en vecka och innehåller uppgifter
+om veckonummer och en array som innehåller sju CalendarDay objekt som klassen skapar. Sedan
+finns det också funktioner som gör att man kan hämta ut veckonummer och arrayen med
+CalendarDay-objekten.</p>
+
+<p>Nästa klass är CalendarMonth. Den klassen ansvarar för den månad som visas i kalendern.
+Den innehåller uppgifter som år (behövs i kalenderhanteringen), månad (både som siffra och
+det svenska namnet på månaden) och en array av CalendarWeek objekt som den har skapat. Jag
+har funktioner som räknar ut om det finns dagar från föregående månad, antal dagar i den
+aktuella månaden och om det finns dagar från nästa månad i kalendern. För att det skulle
+bli renare kod, lade jag först in alla dagarna i en array. Delade upp arrayen så varje
+del-array innehåller sju dagar så att jag kunde skicka dessa del-arrayer till
+CalendarWeek-konstruktorn för att skapa en vecka. CalendarWeek läser sedan arrayen med sju
+dagar för att skapa en vecka. I konstruktorn skickar jag också med veckonumret som jag
+räknar ut för veckans första dag.</p>
+
+<p>Klassen CalendarLogic fungerar som ett gränssnitt mellan sidokontrollern och CalendarMonth.</p>
+
+<p>Sidokontrollern calendar.php innehåller HTML-koden och anropar funktioner i CalendarLogic.
+CalendarLogic-objektet sparas i sessionen och rensas och skapas igen varje gång man kommer
+till sidan. För att komma till föregående eller nästa månad använder jag GET med information
+om vilken månad man önskar ska visas.</p>
+
+<p>Jag uppdaterade också autoloadern så att jag inte behöver lägga varje klass i ett eget
+bibliotek. Autoloadern söker igenom src-katalogen efter underkataloger och går sedan in i
+dessa och letar efter filer. Jag har bara gjort så att autoloadern klarar en nivå av
+underkataloger. Man ska inte göra mer än vad man behöver. Behöver man utöka i framtiden
+gör man det då.</p>
 
 <h2>Kmom03</h2>
 <p>Är ännu inte redovisad.</p>

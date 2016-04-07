@@ -8,21 +8,8 @@
 include(__DIR__.'/config.php');
 
 if(isset($_GET['newGame'])) {
-  // Unset all of the session variables.
-  $_SESSION = array();
-
-  // If it's desired to kill the session, also delete the session cookie.
-  // Note: This will destroy the session, and not just the session data!
-  if (ini_get("session.use_cookies")) {
-      $params = session_get_cookie_params();
-      setcookie(session_name(), '', time() - 42000,
-          $params["path"], $params["domain"],
-          $params["secure"], $params["httponly"]
-      );
-  }
-
-  // Finally, destroy the session.
-  session_destroy();
+  // Unset the session variable.
+  unset($_SESSION['diceLogic']);
 }
 
 // Create the object or get it from the session
@@ -32,8 +19,6 @@ if(isset($_SESSION['diceLogic'])) {
 else {
   $diceLogic = new DiceLogic();
   $_SESSION['diceLogic'] = $diceLogic;
-  $score = 0;
-  $savedScore = 0;
 }
 
 $rollDice = isset($_GET['rollDice']) ? true : false ;
@@ -61,6 +46,7 @@ det dyker upp en etta och du förlorar alla poäng som du inte har sparat i rund
 <p>{$diceLogic->getDice()}</p>
 <p>Poäng: {$diceLogic->getAccumulatedScore()}</p>
 <p>Sparade poäng: {$diceLogic->getSavedScore()}</p>
+<p>Meddelande: {$diceLogic->getMessage()}</p>
 <ul class="button">
     <li><a href="?newGame">Nytt spel</a></li>
     <li><a href="?savePoints">Spara poäng</a></li>

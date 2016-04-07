@@ -143,6 +143,21 @@ a {
         font-size: .8em;
     }
 
+    .navbar {
+        background: #fff;
+    }
+
+    /* Navigation bar */
+    .navbar a {
+        border-radius: 7px;
+        display: block;
+        margin-bottom: .3em;
+        margin-left: 0;
+        padding: .1em;
+        text-align: center;
+        width: auto;
+    }
+
 
     /* Layout for me-page */
     .me-picture {
@@ -151,9 +166,6 @@ a {
 }
 
 
-/**
- * Responsive layout
- */
 @media (max-width: 500px) {
     /* Layout for header */
     .sitetitle {
