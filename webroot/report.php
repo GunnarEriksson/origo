@@ -146,7 +146,43 @@ underkataloger. Man ska inte göra mer än vad man behöver. Behöver man utöka
 gör man det då.</p>
 
 <h2>Kmom03</h2>
-<p>Är ännu inte redovisad.</p>
+<h4>Är du bekant med databaser sedan tidigare? Vilka?</h4>
+<p>Den enda kontakten med databaser är från den förra kursen htmlphp där jag arbetade med
+databasen SQLite, som är en filbaserad databas. Nu när jag har bekantat mig med databasen
+MySQL så tycker jag det var ett bra upplägg att man fick börja med SQLite, som är något
+enklare att arbeta med, för att sedan följa upp med databasen MySQL.</p>
+
+<h4>Hur känns det att jobba med MySQL och dess olika klienter, utvecklingsmiljö och BTH driftsmiljö?</h4>
+<p>Det var kul att få testa på några olika klienter som alla har sina styrkor. MySQL CLU är snabb
+och enkel att arbeta med om man kan SQL-syntaxen. Vill man arbeta grafiskt med databasen, verkar
+PHPMyAdmin vara ett bra verktyg. Den kändes dock lite krångligare än SQLite Manager som jag använde
+för att hantera databasen SQLite. Det verktyget som jag tyckte bäst om var MySQL Workbench. Ett verktyg
+som jag kommer att använda i framtiden. Dess största styrka är att man kan bygga upp och testköra sin
+databas på ett relativt enkelt sätt. Jag tror att det kommer förenkla arbetet, speciellt när databaserna
+blir större. Något som också kommer hjälpa en, när databaserna blir större, är möjligheten att generera
+en grafisk bild över databasen och dess vyer. En grafisk bild underlättar för att förstå databasens struktur.</p>
+
+<p>Jag hade dock problem med att få MySQL Workbench att fungera på BTHs databas. Jag insåg tidigt att
+problemet låg i själva verktyget, då jag kunde koppla upp mig mot BTHs databas med de andra klienterna. Svaret
+hittade jag i forumet. Där rekommenderades man till att installera en tidigare version av verktyget som hade
+ett alternativ i fliken ”Advanced”, vilket den senaste versionen saknar, och sedan klicka i den rutan. När
+jag hade gjort det, gick det bra att koppla upp sig mot BTHs databas och köra några tester mot den
+databasen.</p>
+
+<h4>Hur gick SQL-övningen, något som var lite svårare i övningen, kändes den lagom?</h4>
+<p>Det var en lagom stor övning. Jag tyckte att man gick igenom de saker som gör att man kan klara sig rätt
+långt på. Det fanns mycket att välja på och jag kan redan ana att det blir nog inte alltid enkelt att få
+ihop en kort och effektiv syntax för att göra det man vill, speciellt då databasen innehåller flera tabeller
+som refererar till varandra. Vyer verkar vara ett kraftfullt instrument när det gäller databaser, men man kan
+förlora överblicken om man inte hittar en bra struktur. Det kanske är tur att MySQL Workbench kan generera
+fram en grafisk bild över databasen och dess vyer.</p>
+
+<p>Jag har läst lite vad andra studenter tycker när det gäller manualen och jag håller nog med de som tycker
+att manualen inte var den lättaste att bläddra i. Ofta googlade jag också för att få lite mer information
+och exempel när det gäller förklaringar och syntax. Grundsyntaxen börjar sitta nu, speciellt de delar som
+man arbetade med i den förra kursen. Övrig syntax kommer jag att behöva repetera, så jag kommer få stor nytta
+att jag sparade övningens SQL-syntax i en textfil. Den kommer nog att användas flitigt i de övriga
+kursmomenten.</p>
 
 <h2>Kmom04</h2>
 <p>Är ännu inte redovisad.</p>
