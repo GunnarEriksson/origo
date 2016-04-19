@@ -2,7 +2,7 @@
 <html lang='<?=$lang?>'>
 <head>
 <meta charset='utf-8'/>
-<title><?=get_title($title)?></title>
+<title><?=getTitle($title)?></title>
 <link rel='shortcut icon' href='<?=$favicon?>'/>
 <?php foreach ($stylesheets as $stylesheet): ?>
 <link rel='stylesheet' type='text/css' href='<?=$stylesheet?>'/>
@@ -12,7 +12,7 @@
 <body>
   <div id='wrapper'>
     <div id='header'><?=$header?></div>
-    <?= GenerateMenu($menu, 'navbar') ?>
+    <?= generateMenu($menu, 'navbar') ?>
     <div id='main'><?=$main?></div>
     <div id='footer'><?=$footer?></div>
   </div>

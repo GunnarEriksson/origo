@@ -8,7 +8,8 @@
  * Default exception handler.
  *
  */
-function myExceptionHandler($exception) {
+function myExceptionHandler($exception)
+{
     echo "Origo: Uncaught exception: <p>" . $exception->getMessage() . "</p><pre>" . $exception->getTraceAsString(), "</pre>";
 }
 set_exception_handler('myExceptionHandler');
@@ -18,7 +19,8 @@ set_exception_handler('myExceptionHandler');
  * Autoloader for classes.
  *
  */
-function myAutoloader($class) {
+function myAutoloader($class)
+{
     $isFileFound = false;
     $dir = ORIGO_INSTALL_PATH . "/src/*";
     $dirs = array_filter(glob($dir), 'is_dir');
@@ -36,3 +38,8 @@ function myAutoloader($class) {
 }
 
 spl_autoload_register('myAutoloader');
+
+function dump($array)
+{
+  echo "<pre>" . htmlentities(print_r($array, 1)) . "</pre>";
+}
