@@ -1,0 +1,63 @@
+table {
+    overflow-x: auto;
+    width: 100%;
+}
+
+table img {
+    width: 80px;
+    height: 40px;
+}
+
+tr {
+    display: table-row;
+}
+
+tr:first-child {
+    background-color: #333;
+    color: #fff;
+}
+
+tr:nth-of-type(even) {
+    background-color: #eee;
+}
+
+td, th {
+    margin: 0;
+    padding: .5em;
+    border: 0;
+}
+
+tr td:nth-child(-n+3) {
+    text-align: center;
+}
+
+tr td:nth-child(5) {
+    text-align: center;
+}
+
+.orderby a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.movie-table table {
+    width: 100%;
+}
+
+.movie-table .table-hits {
+    text-align: right;
+}
+
+.movie-table .movie-pages {
+    text-align: center;
+}
+
+/**
+ * Responsive layout
+ */
+@media (max-width: 600px) {
+    .movie-table table {
+        display: block;
+        overflow-x: auto;
+    }
+}

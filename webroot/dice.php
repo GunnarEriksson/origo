@@ -33,12 +33,12 @@ if ($shouldSaveScore) {
 }
 
 // Do it and store it all in variables in the Origo container.
-$origo['title'] = "Tärningsspel | oophp";
+$origo['title'] = "Tärningsspel 100";
 // Add style for csource
 $origo['stylesheets'][] = 'css/dice.css';
 
 $origo['main'] = <<<EOD
-<h1>Tärningsspelet 100</h1>
+<h1>{$origo['title']}</h1>
 <h2>Regler</h2>
 <p>I tärningsspelet 100 gäller det att samla ihop poäng för att komma först till 100.
 Du kastar i varje omgång en tärning tills du väljer att stanna och spara poängen eller

@@ -9,7 +9,7 @@
 include(__DIR__.'/config.php');
 
 // Do it and store it all in variables in the Anax container.
-$origo['title'] = "Källkod | oophp";
+$origo['title'] = "Källkod";
 
 // Add style for csource
 $origo['stylesheets'][] = 'css/source.css';
@@ -18,7 +18,7 @@ $origo['stylesheets'][] = 'css/source.css';
 //$source = new CSource();
 $source = new CSource(array('secure_dir' => '..', 'base_dir' => '..'));
 
-$origo['main'] = "<h1>Visa källkod</h1>\n" . $source->View();
+$origo['main'] = "<h1>{$origo['title']}</h1>\n" . $source->View();
 
 // Finally, leave it all to the rendering phase of Anax.
 include(ORIGO_THEME_PATH);

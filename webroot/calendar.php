@@ -27,11 +27,11 @@ if (isset($month)) {
 }
 
 // Do it and store it all in variables in the Origo container.
-$origo['title'] = "Kalender | oophp";
+$origo['title'] = "Kalender";
 // Add style for csource
 $origo['stylesheets'][] = 'css/calendar.css';
 $origo['main'] = <<<EOD
-<h1>Kalender</h1>
+<h1>{$origo['title']}</h1>
 <div class="calendar-wrapper">
     <div class="calendar-header">
         <img src="img/calendar/{$calendar->getMonthImgName()}" alt="Bild för månaden {$calendar->getMonth()}"/>

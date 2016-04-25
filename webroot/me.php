@@ -11,7 +11,7 @@ include(__DIR__.'/config.php');
 
 
 // Do it and store it all in variables in the Origo container.
-$origo['title'] = "Min me-sida | oophp";
+$origo['title'] = "Min me-sida";
 
 $origo['main'] = <<<EOD
 <h1>Om Mig Själv</h1>

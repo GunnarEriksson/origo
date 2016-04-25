@@ -53,30 +53,62 @@ a {
  * Layout for navigation bar
  */
 .navbar {
-    border-radius: 7px;
     background: #396a2f;
     background: linear-gradient(#396a2f, #55a046);
-    display: block;
-    overflow: auto;
+    border-radius: 7px;
     margin-top: 5px;
-    width: 100%;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+    display: inline-block;
+    position: relative; /* New - to place the drop-down menu correctly */
 }
 
 .navbar a {
-    background: #396a2f;
-    background: linear-gradient(#396a2f, #55a046);
+    white-space: nowrap; /* New - to make the drop-down menu items stay on one row */
+    text-decoration: none;
     color: #fff;
-    display: inline-block;
     margin-left: .5em;
     padding: .5em;
+    display: block;
+
 }
 
-.navbar a:hover {
+.navbar li a.selected-parent, /* New - to style the selected parent */
+.navbar a.selected {
+  color: #f5a06e;
+}
+
+.navbar li a:hover {
     color: #f5a06e;
 }
 
-.navbar .selected {
-    color: #f5a06e;
+
+/* New - to style the submenu, start by hiding it using absolute positioning */
+.navbar ul ul {
+  background-color: #396a2f;
+  background: linear-gradient(#55a046, #396a2f);
+  padding: 8px;
+  position: absolute;
+  left: -9999px;
+  z-index: 2;
+}
+
+/* Display the submenu when hovering the list element, absolute positioning */
+.navbar li:hover ul {
+    left: 0;
+}
+
+/* New - style items of the submenu when hovering and selected */
+.navbar li li a:hover,
+.navbar li li a.selected {
+  color: #f5a06e;
 }
 
 
@@ -133,7 +165,7 @@ a {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 670px) {
     /* Layout for header */
     .sitetitle {
         font-size: 40px;
@@ -143,19 +175,36 @@ a {
         font-size: .8em;
     }
 
-    .navbar {
+    .navbar ul {
         background: #fff;
+    }
+
+    .navbar li {
+        display: block;
     }
 
     /* Navigation bar */
     .navbar a {
+        background: #396a2f;
+        background: linear-gradient(#396a2f, #55a046);
         border-radius: 7px;
-        display: block;
         margin-bottom: .3em;
         margin-left: 0;
         padding: .1em;
         text-align: center;
-        width: auto;
+    }
+
+    .navbar ul ul {
+      background-color: #396a2f;
+      background: linear-gradient(#55a046, #396a2f);
+      padding: 0;
+      position:relative;
+      left: 0;
+      z-index: 0;
+    }
+
+    .navbar li ul {
+        background: #fff;
     }
 
 

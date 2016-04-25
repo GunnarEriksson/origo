@@ -10,10 +10,10 @@ include(__DIR__.'/config.php');
 
 
 // Do it and store it all in variables in the Origo container.
-$origo['title'] = "Redovisning | oophp";
+$origo['title'] = "Redovisning";
 
 $origo['main'] = <<<EOD
-<h1>Redovisning</h1>
+<h1>{$origo['title']}</h1>
 <h2>Kmom01</h2>
 <h4>Vilken utvecklingsmiljö använder du?</h4>
 <p>Jag använder samma miljö som i kursen "htmlphp", där jag använder operativsystemet
@@ -185,7 +185,51 @@ att jag sparade övningens SQL-syntax i en textfil. Den kommer nog att användas
 kursmomenten.</p>
 
 <h2>Kmom04</h2>
-<p>Är ännu inte redovisad.</p>
+<h4>Hur kändes det att jobba med PHP PDO?</h4>
+<p>Det känns bra. Jag arbetade lite med PHP PDO i kursen htmlphp, så det känns bekant. Det som jag tycker är
+knepigt är när man arbetar med flera tabeller och måste använda sig av olika JOINs. Lägger man sedan till några
+vyer, så är det lätt att man går vilse. Jag förstår nu bättre varför det är så viktigt att göra en grundlig analys
+innan man börjar sätta upp sin databas. Får man inte till en bra struktur från början, kan det bli riktigt
+svårt att arbeta mot den senare.</p>
+
+<h4>Gjorde du guiden med filmdatabasen, hur gick det?</h4>
+<p>Ja, det gjorde jag. Min erfarenhet från tidigare kursmoment, visar att man vinner tid senare om man går igenom
+guiderna grundligt. Jag använde min origo-mall (bara själva mallen) när jag gjorde övningarna. Den enda klassen
+jag skapade under övningarna var databasklassen, övriga klasser väntade jag med till själva uppgiften. Jag anade
+tidigare att jag skulle få nytta av MYSQL Workbench och det visade sig att jag hade rätt i den här övningen. Det
+är smidigt att bygga upp databasen och testa olika SQL-kod innan man börjar med själva kodningen.</p>
+
+<p>Övningen med CDatabase gjorde jag i mitt ramverk. Jag skapade en fil test.php som en fil bland de olika
+sidokontrollerna och gjorde övningarna. Ett bra delmoment som gjorde att man fick repetera det man hade lärt sig
+i den tidigare övningen.</p>
+
+<p>Själva uppgiften gick smidigt tack vare jag lade ner tid på övningarna. Jag funderade lite om jag skulle göra
+exekveringen av frågorna till databasen i klassen MovieSearch eller inte. Först ville jag inte låta klassen sköta
+exekveringarna då jag gärna vill att modulerna ska utföra väl avgränsade uppgifter. Problemet var att det blev ganska
+mycket kod i sidokontrollen, trots det bara bestod av anrop till klassfunktioner. I uppgiften stod det att klassen
+skulle förbereda SQL-strängarna, så då tyckte jag att de kunde sköta själva exekveringen också. På så sätt blev
+det mindre kod i sidokontrollen.</p>
+
+<p>Uppgiften användare hantering gick ganska snabbt tack vare en bra guide och så hade jag gjort en användare
+hantering tidigare i det sista momentet i kursen htmlphp.</p>
+
+<p>När jag gjorde extra uppgiften, hade jag först tänkt utveckla de metoder jag hade tidigare för menyer. Men
+det börjar bli ont om tid och jag vill inte komma efter, så jag tog exemplet som fanns i guiden och gick igenom
+hur den fungerade istället. Efter lite anpassningar så har jag nu admin i menyn som döljer login, logout och
+status. Det som återstår är en snyggare lösning när man kör sidan i en mobiltelefon.</p>
+
+<h4>Du har nu byggt ut ditt Anax med ett par moduler i form av klasser, hur tycker du det konceptet fungerar
+så här långt, fördelar, nackdelar?</h4>
+<p>Konceptet känns bättre och bättre ju mer man arbetar med det. När det är väl på plats så slipper man mycket
+onödig administration. Autoloadern tar hand om laddning av klasser, så man slipper göra include överallt. I
+sidokontrollern kan man koncentrera sig på kärnan, så sköter ramverket allt runt om kring. Enkelt att lägga
+till en css-fil till sidan och låta ramverket inkludera den och på så sätt dela upp css-filerna på ett smidigt
+sätt. Jag hittade ett tips på att lägga till kod i konfigfilen som känner av om man ska koppla upp sig mot
+min lokala server eller skolans server, beroende på var ifrån koden körs ifrån. Skönt att slippa tänka på det.</p>
+
+<p>Jag har dock mycket att lära än, det lär nog dyka upp situationer där man funderar vart man ska lägga koden.
+Utan strukturen hade det varit svårare att lägga till nya saker. Det hade nog blivit rörigt efter ett tag.</p>
+
 
 <h2>Kmom05</h2>
 <p>Är ännu inte redovisad.</p>
