@@ -19,6 +19,7 @@ $output = $user->getUserLoginStatus();
 
  // Do it and store it all in variables in the Origo container.
 $origo['title'] = "Login";
+$origo['stylesheets'][] = 'css/form.css';
 
 $origo['main'] = <<<EOD
 <h1>{$origo['title']}</h1>

@@ -232,7 +232,50 @@ Utan strukturen hade det varit svårare att lägga till nya saker. Det hade nog 
 
 
 <h2>Kmom05</h2>
-<p>Är ännu inte redovisad.</p>
+<h4>Det blir en del moduler till ditt Anax nu, hur känns det?</h4>
+<p>Det känns bra. Jag tycker det blir lättare att skriva renare kod när man arbetar med klasser. Klasserna gör
+det möjligt att arbeta med objekt och då kan man hålla objektets parametrar och funktioner samlade på ett ställe.
+Möjligheten att ge modulerna bra namn gör det lättare att få en överblick över logiken som klassen hanterar.</p>
+
+<h4>Berätta hur du tänkte när du löste uppgifterna, hur tänkte du när du strukturerade klasserna och sidkontrollerna?</h4>
+<p>Jag gjorde övningarna utan att blanda in moduler för att få en känsla för vad koden gör. När väl koden är på
+plats så tycker jag att det är lättare att se hur strukturen ska bli. Jag brukar ofta arbeta enligt den metoden.
+Först lite ”fulkod” och sedan förbättra strukturen. Jag brukar alltid nöja med mig vad som fungerar för stunden.
+Det är ingen idé att sitta och gissa vad som behövs i framtiden och bygga en stor och komplex struktur som
+kanske aldrig kommer att användas.</p>
+
+<p>Min struktur är enkel. Jag har sidokontroller för administration (skapa nytt, ändra, ta bort och återställa).
+Sedan har jag sidokontroller för visa allt, blogg och sidor. Varje sidokontroll ska ha ett väl definierat ansvar
+och innehålla så lite kod som möjligt. Koden i sidokontrollerna hanterar inkommande parametrar och skapandet av
+objekt och anrop av dess klasser. Jag fördrar att hantera parametrarna i sidokontrollen för då tycker jag att
+jag får en bra överblick vilken data som sidokontrollern hanterar.</p>
+
+<p>Jag har sedan modulerna Content, Blog och Page som ansvar för administration, blogg och sidor. Modulerna är
+fristående till varandra. Visserligen administrerar Content Blog och Page, men de har inte så mycket gemensam
+kod att det är värt besväret att göra en arvsstruktur. Det har inte heller uppstått en situation där jag
+behöver hantera Blog och Page som en enhet, t ex att de ska sparas i en lista. Det skulle dock vara tänkbart
+att det är bara är Content som pratar med databasen och Blog och Page bara ansvar för att visa respektive
+innehåll. Det skulle dock göra att klassen Content blir större.</p>
+
+<p>Ett annat alternativ är att skapa en ny abstrakt klass som Blog och Page ärver. Det skulle spara en del
+kod, speciellt för att skriva ut att ett fel har uppstått. Idag är den funktionen samma i Blog och Page.
+För tillfället får det se ut som det gör och uppstår det ett behov så är det bara att ändra strukturen.</p>
+
+<h4>Börjar du få en känsla för hur du kan strukturera din kod i klasser och moduler, eller kanske inte?</h4>
+<p>Det börjar falla på plats, även om det är mycket att hålla reda på just nu. Det jag främst saknar är
+erfarenheten hur man brukar dela upp olika ansvarsområden när det gäller webbprogrammering. I det här
+momentet, ska Content sköta all hantering mot databasen och Blog och Page bara ansvarar för att visa
+innehållet? Det kanske inte finns någon tumregel utan var och en gör vad den tycker är bäst.</p>
+
+<h4>Snart har du grunderna klara i ditt Anax, grunderna som kan skapa många webbplatser, är det något du
+saknar så här långt, kanske några moduler som du känner som viktiga i ditt Anax?</h4>
+<p>Det jag saknar är vad som kommer beröras i nästa moment, nämligen bildhantering. Jag gillar
+naturfotografering och har en egen hemsida där jag lägger ut mina bilder. Idag använder jag mig av
+ett bildhanteringsprogram som jag har laddad ner från nätet, men har ännu inte hittat något program
+som visar bilderna på det sätt jag vill. Jag vet dock en professionell naturfotograf som har en
+bildvisning exakt som jag vill och den sidan är skriven i PHP. Kanske kan jag skaffa mig så mycket
+kunskap så jag själv kan göra en sådan sida i framtiden. Jag hoppas att nästa moment är ett första
+steg på vägen.</p>
 
 <h2>Kmom06</h2>
 <p>Är ännu inte redovisad.</p>

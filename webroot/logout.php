@@ -20,6 +20,7 @@ if(isset($_POST['logout'])) {
 $output = $user->getUserLoginStatus();
 
 $origo['title'] = "Logout";
+$origo['stylesheets'][] = 'css/form.css';
 
 $origo['main'] = <<<EOD
 <h1>{$origo['title']}</h1>

@@ -104,6 +104,54 @@ $menu = array(
         ),
 
         // This is a menu item
+        'content'  => array(
+            'text'  =>'Sidor/Blogg',
+            'url'   =>'',
+            'title' => '',
+
+            // Here we add the submenu, with some menu items, as part of a existing menu item
+            'submenu' => array(
+
+                'items' => array(
+                    // This is a menu item of the submenu
+                    'item 1'  => array(
+                        'text'  => 'Allt innehåll',
+                        'url'   => 'content_view.php',
+                        'title' => 'Allt innehåll'
+                    ),
+
+                    // This is a menu item of the submenu
+                    'item 2'  => array(
+                        'text'  => 'Blogg',
+                        'url'   => 'content_blog.php',
+                        'title' => 'Blogg',
+                    ),
+
+                    // This is a menu item of the submenu
+                    'item 3'  => array(
+                        'text'  => 'Nytt innehåll',
+                        'url'   => 'content_create.php',
+                        'title' => 'Nytt innehåll',
+                    ),
+
+                    // This is a menu item of the submenu
+                    'item 4'  => array(
+                        'text'  => 'Återställ DB',
+                        'url'   => 'content_reset.php',
+                        'title' => 'Återställ DB',
+                    ),
+                ),
+            ),
+        ),
+
+        // This is a menu item
+        'textfilter'  => array(
+            'text'  =>'Textfilter',
+            'url'   =>'textfilter.php',
+            'title' => 'Textfilter'
+        ),
+
+        // This is a menu item
         'report'  => array(
             'text'  =>'Redovisning',
             'url'   =>'report.php',

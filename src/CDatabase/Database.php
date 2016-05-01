@@ -113,7 +113,7 @@ class Database
     * @param int $fetchStyle can be changed by sending in arguments.
     * @return array with resultset.
     */
-    public function executeSelectQueryAndFetchAll($query, $params=array(), $debug=false, $fetchStyle=null)
+    public function executeSelectQueryAndFetchAll($query, $params=null, $debug=false, $fetchStyle=null)
     {
         // Make the query
         $this->stmt = $this->db->prepare($query);

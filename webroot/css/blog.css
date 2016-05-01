@@ -1,0 +1,29 @@
+/**
+ * General elements
+ */
+
+ .blogpost {
+     border: 1px solid #777;
+     border-radius: 2px;
+     margin-top: 10px;
+ }
+
+ .blogpost h2 {
+     background: #396a2f;
+     background: linear-gradient(#396a2f, #55a046);
+     margin: 0;
+     padding: 5px 0 5px 10px;
+ }
+
+ .blogpost h2 a {
+     color: #fff;
+     text-decoration: none;
+ }
+
+ .blogpost a:hover {
+    color: #f5a06e;
+ }
+
+ .blogpost p {
+     padding: 0 10px 0 10px;
+ }

@@ -1,0 +1,15 @@
+label {
+    font-size: smaller;
+}
+
+input[type=text],
+input[type=password] {
+    font-size: 1.2em;
+    width: 500px;
+}
+
+textarea {
+    font-size: 1.2em;
+    height: 200px;
+    width: 500px;
+}

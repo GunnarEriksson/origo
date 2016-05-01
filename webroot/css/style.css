@@ -10,8 +10,22 @@ body {
     font-family: arial, sans-serif;
 }
 
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
 a {
     text-decoration: none;
+}
+
+.font-small-italic {
+    font-size: .7em;
+    font-style: italic;
+    line-height: .4em;
 }
 
 
@@ -29,8 +43,8 @@ a {
  * Layout for header
  */
 #header {
-  margin-bottom: 20px;
-  position: relative;
+    margin-bottom: 20px;
+    position: relative;
 }
 
 .sitetitle {
@@ -60,9 +74,9 @@ a {
 }
 
 .navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar li {
@@ -71,18 +85,17 @@ a {
 }
 
 .navbar a {
-    white-space: nowrap; /* New - to make the drop-down menu items stay on one row */
-    text-decoration: none;
     color: #fff;
+    display: block;
     margin-left: .5em;
     padding: .5em;
-    display: block;
-
+    text-decoration: none;
+    white-space: nowrap; /* New - to make the drop-down menu items stay on one row */
 }
 
 .navbar li a.selected-parent, /* New - to style the selected parent */
 .navbar a.selected {
-  color: #f5a06e;
+    color: #f5a06e;
 }
 
 .navbar li a:hover {
@@ -92,12 +105,12 @@ a {
 
 /* New - to style the submenu, start by hiding it using absolute positioning */
 .navbar ul ul {
-  background-color: #396a2f;
-  background: linear-gradient(#55a046, #396a2f);
-  padding: 8px;
-  position: absolute;
-  left: -9999px;
-  z-index: 2;
+    background-color: #396a2f;
+    background: linear-gradient(#55a046, #396a2f);
+    padding: 8px;
+    position: absolute;
+    left: -9999px;
+    z-index: 2;
 }
 
 /* Display the submenu when hovering the list element, absolute positioning */
@@ -108,7 +121,7 @@ a {
 /* New - style items of the submenu when hovering and selected */
 .navbar li li a:hover,
 .navbar li li a.selected {
-  color: #f5a06e;
+    color: #f5a06e;
 }
 
 
