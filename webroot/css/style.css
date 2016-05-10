@@ -178,7 +178,7 @@ a {
     }
 }
 
-@media (max-width: 670px) {
+@media (max-width: 930px) {
     /* Layout for header */
     .sitetitle {
         font-size: 40px;

@@ -1,0 +1,20 @@
+/**
+ * CSS for figure and displaying images.
+ */
+figure.figure {
+    display: table;
+    margin: 16px 16px 22px 16px;
+    padding: 0;
+}
+
+/* Chrome shinks images in td */
+figure.figure td img {
+    max-width: none;
+}
+
+figure.figure figcaption {
+    caption-side: bottom;
+    display: table-caption;
+    font-style: italic;
+    padding: 0;
+}

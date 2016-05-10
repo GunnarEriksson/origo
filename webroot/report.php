@@ -278,7 +278,65 @@ kunskap så jag själv kan göra en sådan sida i framtiden. Jag hoppas att näs
 steg på vägen.</p>
 
 <h2>Kmom06</h2>
-<p>Är ännu inte redovisad.</p>
+<h4>Hade du erfarenheter av bildhantering sedan tidigare?</h4>
+<p>Då ett av mina fritidsintressen är naturfotografering, så har jag bearbetat mina bilder i Photoshop
+sedan 2004. Jag gör inga avancerade saker, utan Photoshop är mitt digitala mörkrum där jag framkallar
+(att få de att likna vad jag upplevde) mina bilder från RAW-formatet till JPEG. Jag anpassar också
+mina bilder för olika ändamål som utskrift, bildvisning med projektor och att visas på en webbsida.</p>
+
+<h4>Hur känns det att jobba i PHP GD?</h4>
+<p>Det var riktigt kul. Ett kraftfullt verktyg som jag kommer fortsätta att använda mig av. Det verkar
+finnas många sätt att processa en bild på, vilket kommer underlätta i många situationer.</p>
+
+<h4>Hur känns det att jobba med img.php, ett bra verktyg i din verktygslåda?</h4>
+<p>Det känns också riktigt bra då jag tycker att man har fått ihop ett bra gränssnitt för att arbeta
+med bilder. Gränssnittet innehåller idag de parametrar för att processa en bild  som jag behöver och
+det verkar inte vara allt för krångligt att lägga till nya funktioner. Helt klart det bästa verktyget
+hittills.</p>
+
+<p>Jag har länge funderat att göra om mitt bildgalleri på min hemsida. Tanken är att låta fönstrets
+storlek avgöra hur stor bilden ska vara. Det finns metoder i JQuery som stödjer detta och då kan man
+skicka värdena för höjd och bredd till img.php för att få största möjliga bild eller så stor som
+originalbilden. Blir bilden mindre än originalstorleken, så får img.php lägga på skärpa som
+kompenserar skärpeförlusten som uppstår när man gör bilden mindre. Dessutom finns det fina möjligheter
+att skapa tumnaglar på ett smidigt sätt.</p>
+
+<h4>Detta var sista kursmomentet innan projektet, hur ser du på ditt Anax nu, en summering så här långt?</h4>
+<p>Det har bara känts bättre ju mer man har arbetat med ramverket. Allt har sin plats och det går
+lätt att lägga till nya sidor och funktioner. Det bästa är att man kan koncentrera sig på sidorna
+och funktionerna låta ramverket hantera allt runt om kring. Som jag tidigare nämnde, så funderar
+jag att göra om min hemsida och då verkar det här ramverket vara en bra grund att börja med.</p>
+
+<h4>Finns det något du saknar så här långt, kanske några moduler som du känner som viktiga i ditt Anax?</h4>
+<p>Nej, inte vad jag kan komma på just nu. Då jag tycker om att arbeta med bilder, så är jag fullt
+nöjd med img.php och galleriet. Jag tycker att man kan använda alla moduler i framtiden på ett eller
+annat sätt. Nu gäller det bara att fortsätta att försöka få en bra struktur på modulerna.</p>
+
+<h4>Övrigt</h4>
+<p>Det som jag upplevde var svårt i det här momentet var att det var svårare att tolka felen,
+svårare att debugga och cachen.</p>
+
+<p>Det vanligaste felet jag hade under momentet, var att ingen bild visades eller bara vissa
+bilder visades. I övrigt verkade allt fungera och inga felmeddelande visades. Jag har implementerat
+en felfunktion i klassen Image.php som använder sig av funktionen die(), men det verkar inte
+hända något. Inte mer än att inte bilden visas. Jag upptäckte detta när jag lade till stödet
+för GIF-bilder och fick inget felmeddelande trots jag inte ännu lagt till funktionen.
+Kanske är det någon som behöver ställas in eller så har jag gjort någon miss.</p>
+
+<p>Att debugga var också svårare. Jag har vant mig med att använda mig av funktionerna
+var_dump() och die(), men det fungerade inte alls. Inget hände fast exekveringen borde ha
+avbrutits. Kanske har det med hur PHP GD fungerar, så jag ska läsa på mer och se om jag kan
+hitta orsaken. Nu fungerade verbose utmärkt, så jag fick köra i det läget och lägga till
+tillfälliga utskrifter där istället.</p>
+
+<p>Cachen är också lite lurig. Ibland har saker inte fungerat och då har man gjort ändringar,
+men det har ändå inte fungerat tills jag har rensat cache-katalogen och då fungerar det.
+Sen kan man luras att tro att allt fungerar, men glömmer bort att bildmodulen väljer en
+cachad bild först. Rensar man katalogen, så blir det fel då det inte är samma kod som används
+när man ska visa en bild som inte finns i cachen.</p>
+
+<p>Kanske beror det på att jag har fel i koden, men jag har svårt att avgöra det då jag har
+för lite erfarenhet när det gäller PHP GD och cachning.</p>
 
 <h2>Kmom07 - 10</h2>
 <p>Är ännu inte redovisad.</p>

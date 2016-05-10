@@ -152,6 +152,13 @@ $menu = array(
         ),
 
         // This is a menu item
+        'gallery'  => array(
+            'text'  =>'Galleri',
+            'url'   =>'gallery.php',
+            'title' => 'Galleri'
+        ),
+
+        // This is a menu item
         'report'  => array(
             'text'  =>'Redovisning',
             'url'   =>'report.php',
