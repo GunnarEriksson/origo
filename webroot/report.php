@@ -339,7 +339,179 @@ när man ska visa en bild som inte finns i cachen.</p>
 för lite erfarenhet när det gäller PHP GD och cachning.</p>
 
 <h2>Kmom07 - 10</h2>
-<p>Är ännu inte redovisad.</p>
+<h4>Krav 1: Struktur och innehåll</h4>
+<p>Strukturen är enligt kraven. Det finns en första sida, en sida med filmer, en nyhetssida och
+en sida om företaget. Det finns en gemensam header i form av en bild som innehåller en titel
+och en slogan. En footer som innehåller copyright företagsnamnet. Navigationsbaren innehåller
+länkar till de olika sidorna. Är man inte inloggad så finns länken ”Logga in”. Loggar man in
+som admin, så byts texten ut mot ”Admin” som döljer en rullgardinsmeny med länkarna ”Profil”,
+”Konton” och ”Logga ut”. Är man en användare utan en administatörs rättigheter, visas
+istället länken ”Konto” som döljer en rullgardinsmeny med länkarna ”Profil” och ”Logga ut”.</p>
+
+<p>I övrigt har jag valt att arbeta med många sidokontrollers, nästan en per webbsidans funktioner.
+Anledningen är att det ska bli lättare att hitta i koden samtidigt som varje sidokontroller får en
+begränsad uppgift. Jag tycker jag har gett dem beskrivande namn, så det ska vara lätt att hitta koden
+startpunkt för att man sedan ska kunna leta sig vidare. Koden i sidokontrollerna består av hantering
+av parametrar som skickas till sidan och anrop till olika klassfunktioner. Jag vill ha hanteringen av
+parametrarna i sidokontrollen för att det ska vara lätt att se vilka parameterar sidokontrollen
+hanterar. Det finns också några funktioner i sidokontrollen, men då som att gruppera anropen till
+klassfunktionerna för att öka läsbarheten. Dessutom finns det tillfälle att förklara vad funktionen
+gör.</p>
+
+<h4>Krav 2: Sida – Filmer</h4>
+<p>Filmsidan består av ett sökfält och en tabell med alla filmerna. I sökfältet kan man söka på titel,
+årtal och genre. Det finns också en länk för att visa alla filmer som finns i databasen.</p>
+
+<p>Tabellen är sorterad när filmen lades in (finns i kolumnen ”published” i db), men man kan också
+sortera tabellen enligt titel, år eller pris. Filmerna kan också tillhöra olika genres och det finns
+en funktion för att visa enbart filmer av en viss typ av genre. Tabellen stöds av paginering och man
+kan välja hur många filmer som ska visas åt gången och sedan bläddra mellan de olika sidorna i
+tabellens footer. Filmerna stöds även av en breadcrumbnavigering. </p>
+
+<p>Klickar man sedan på bilden, titeln eller handlingen kommer man till en sida där filmen presenteras
+i detalj. Det finns även två länkar till Imdb och Youtube.</p>
+
+<p>Är man inloggad som administrator finns det ett fält i tabellen som innehåller en penna och ett kryss.
+Dessa symboler finns också i presentationen av filmen. Med dessa kan man ändra eller ta bort en film. Det
+finns också ett ytterligare fält i tabellsidan. Fältet innhåller två knappar där man kan lägga till en ny
+film eller återställa databasen för filmerna.</p>
+
+<p>Är man inloggad som användare finns det en hyrknapp på sidan där man presenterar filmen i detalj.
+Knappen stegar en räknar i databasen som talar om hur många som har hyrt filmen och fältet när filmen senast
+hyrdes ut.</p>
+
+<p>Jag använder mig av funktionen img.php för att visa bilderna.</p>
+
+<h4>Krav 3: Sida – Nyheter</h4>
+<p>Nyhetssidan består av 7 bloggposter samt två fält där man kan skapa en ny bloggpost samt att välja att
+endast visa bloggposter av en viss typ av kategori. Varje bloggpost kan tillhöra en kategori. Bloggposterna
+är sorterade enligt senast skapad eller ändrad, beroende vilket fält som har den senaste tidstämplen.
+Bloggposterna stöds av paginering där man kan välja att visa 2, 4 eller 8 poster åt gången och längst ned
+på sidan finns en möjlighet att bläddra mellan sidorna. Nyhetssidan stöds också av navigering av typen
+breadcrumb.</p>
+
+<p>Endast en delmängd av texten visas när man ser flera poster. Det finns en funktion som ser till att
+inte bryta mitt i ett ord. Klickar man på rubriken eller texten ”Läs mer >>”, visas all text i
+bloggposten.</p>
+
+<p>Är man inloggad som admin, så visas symbolerna av en penna och ett kryss på alla poster för att man
+ska kunna ändra eller radera posterna. Övriga användare kan bara ändra och ta bort de bloggposter som
+man själv har skapat.</p>
+
+<h4>Krav 4: Första sidan</h4>
+<p>Första sidan innehåller de genres som finns i filmdatabasen, de tre senaste filmerna, den mest hyrda
+filmen, den senaste hyrda filmen samt de tre senaste nyhetsbloggarna. Klickar man på filmerna så visas
+detaljerna om filmen. Klickar man på en bloggpost, visas hela bloggposten text. Klickar man på genre, så
+kommer man till tabellen med filmer för den valda genren.</p>
+
+<p>Den mest hyrda filmen styrs av kolumnen ”rents” i filmtabellen. Den film som har störst värde, visas
+som den mest hyrda filmen. Den senast hyrda filmen, styrs av kolumnen ”rented” i filmdatabasen. Den film
+som har den senaste tidsstämplen visas som senast hyrda film.</p>
+
+<p>Dessa två kolumner påverkas av hyrknappen som finns på filmernas detaljsida om du är inloggad. Ett
+tryck på knappen stegar antalet träffar i ”rents” med ett samtidigt som ”rented” får aktuell tidstämpel.</p>
+
+<h4>Krav 5, 6: Extra funktioner (optionell)</h4>
+<p><strong>En ny sida – Tävling</strong></p>
+<p>Tävlingen är en utökad version av Dice 100 från ett av kursmomenten. Skillnaden är att det beräknas ett
+slutpoäng när tävlingen är klar. Från de 100 poängen får man 5 poängs avdrag varje gång man sparar. Man
+får också avdrag med det poängantal man förlorar när man får en etta.</p>
+
+<p>Är man inloggad, kan man välja att spara sina poäng i en tabell och har chans att vara med i månadens tävling.
+På sidan visas de fem som har flest poäng.</p>
+
+<p><strong>En ny sida – Filmkalendern</strong></p>
+<p>Kalendern är från ett av kursmomenten och det enda jag har gjort är att byta ut bilderna till bilder från
+filmerna som finns på sidan filmer. Jag använder mig också av img.php för att visa bilderna.</p>
+
+<p><strong>Kund och profilsida</strong></p>
+<p>Klickar man på länken ”Logga in” så finns det också en knapp för att skapa ett nytt konto, är man fyller i
+användarnamn, namn, information, e-post och ett lösenord. Användarnamnet är unikt och är namnet redan upptaget
+får man ett felmeddelande om man måste välja ett annat användarnamn.</p>
+
+<p>Varje användare kan se och uppdatera sin egen profil under länken ”Konto”. Jag tycker inte att en användare
+ska se allt som en administratör kan göra. Jag tror jag inte stött på det någon gång i verkligheten. Som inloggad
+användare kan man ändra sin profil samt ändra eller ta bort de bloggposter man själv har skapat. Går man in på
+sidan nyheter finns det en penna och ett rött kryss på de bloggposter man har skapat och kan därmed ändra eller
+ta bort dessa.</p>
+
+<p><strong>Ladda upp bilder</strong></p>
+<p>När man lägger till eller uppdatera en film, finns en möjlighet att lägga till en bild. Skulle det inte gå
+att lägga till en bild, visas ett felmeddelande, men övrig data läggs till. Jag tyckte det var bättre att
+visa en film utan bild än ingenting alls. Det finns dock inte stöd att bilden tas bort när filmen tas
+bort p g a tidsbrist.</p>
+
+<p><strong>Breadcrumb navigering till filmer och blogg</strong></p>
+<p>Både filmer och nyhetsblogg stöds av breadcrumb navigering. Har man valt ut filmen eller bloggposten via
+genre eller kategori, visas detta också i breadcrumben.</p>
+
+<p><strong>Administration för användare</strong></p>
+<p>Är man inloggad som admin, finns länken ”konton” i rullgardinsmeny ”Admin”. Som administratör kan man söka
+efter en användare, skapa ett nytt konto, ändra samtliga konton samt ta bort alla konton utom admin-kontot. Att
+ta bort admin-kontot skulle ställa till besvär, så jag lade in det skyddet. Det finns också ett skydd som förhindrar
+administratören att ändra användarnamnet och namnet för administratören. Skulle användarnamnet ändras för
+administratören skulle flera funktioner slås ut.</p>
+
+<p>Tabellen över användarena kan sorteras med hjälp av användarnamn (akronym) eller namnet. Tabellen stöds också
+av paginering där administratören kan välja på att visa 2, 4 eller 8 användare åt gången och bläddra bland sidorna.</p>
+
+<p><strong>Ditt Anax på GitHub</strong></p>
+<p>Jag har använt GitHub under hela projektet och sparat flitigt under tiden jag har arbetet med projektet. Det hade
+inte varit roligt om datorn hade krachat och man inte har en kopia på arbetet sparat någon annanstans. Här är länken
+till mallen av Origo: https://github.com/GunnarEriksson/myOrigo</p>
+
+<p><strong>Egen funktion</strong></p>
+<p>Min extra funktion är en hyr-knapp på detaljsidan för filmer. När man trycker på hyrknappen uppdateras kolumnen ”rents”
+i filmtabellen. Kolumnen visar hur många gångar en film har hyrts, vilket kan påverka den mest hyrd filmen på förstasidan.
+När klickar på knappen sätts också en aktuell tidstämpel i kolumnen ”rented”, vilken visar när en film hyrdes senast.
+Den kolumnen påverkar den senast hyrda filmen på första sidan.</p>
+
+<p>Jag lade till funktionen för att få sidan lite mer verklig än att slumpa eller hårdkoda dessa filmer på första sidan.</p>
+
+<p>I tävlingen finns det möjligheten att spara sina resultat i en tabell, vilket gör det lite roligare att spela och se
+om man kan komma överst i tabellen.</p>
+
+<p>Websidan innehåller många kontroller för nummer, datum och obligatoriska parametrar. Sidan är också responsive, dock
+fungerar inte rullgardinsmenyerna på platta och mobil. Jag tror jag behöver ett javascript för den saken. Det får komma
+i kurs 4.</p>
+
+<h4>Hur gick projektet att genomföra</h4>
+<p>Det var ett roligt projekt att genomföra och täckte väl de saker vi gick igenom under kursmomenten. Men det tog tid, mer
+tid än vad jag trodde då man kunde återanvända en hel del man gjorde under kursmomenten. Men det är klart, allt finlir tar tid.</p>
+
+<p>Projektet var perfekt för att repetera det man lärde sig under kursmomentet och det känns som betydligt mer har hunnit sjunka
+in nu än när man började på det här projektet. Det kändes som mallen underlättade mycket när man byggde upp koden. Varje sak har
+sin plats och man kan hålla sidokontrollerna hyfsat rena, där jag låter sidokontrollerna hantera parametrarna och anropen till
+klassfunktionerna.</p>
+
+<p>Mallen gör det också enkelt att dela upp css-koden i olika filer, vilket jag tycker är en fördel vilket gör att man kan hålla
+ner storleken på dessa filer. Sidokontrollen visar snabbt vilka css-filer som är inblandade.</p>
+
+<p>Om jag hade haft mer tid, så hade jag lagt den tiden på refaktorering. Först hade jag gått igenom css-filerna, där det säker
+finns lite dubbel kod som jag kunde lagt i style.css.</p>
+
+<p>Jag vet också att det finns samma funktion på två ställen och dessa hade jag försökt bryta ut till en gemensam funktionsfil
+för koden skulle bli DRY.</p>
+
+<p>Webbdesign hade heller inte varit fel att lära sig. Det är inte lätt att komma på en snygg design som kan tilltala de som
+besöker sidan.</p>
+
+<h4>Tankar om kursen</h4>
+<p>Den här kursen kändes mer omfattande än den förra kursen htmlphp. En del av kursmomenten var väl omfattande och tog ett tag
+att greppa. Ett tag kände jag att jag kopierade väl mycket även om jag innan gick igenom koden för att förstå den. Nu efteråt
+förstår jag tyngdpunkten låg på objektorienterad PHP programmering och det skulle inte finnas tid för att göra smarta
+funktioner som img.php (om man nu hade fått ihop det överhuvudtaget).</p>
+
+<p>Jag har dock funderat under kursens gång om innehållet inte är lite väl tilltaget för att vara en kurs på halvfart. Det känns
+som jag har lagt mer tid än så. Fast det kanske beror på ambitionsnivån.</p>
+
+<p>Men kursen har varit bra och funktionen img.php kommer jag nog använda i framtiden. Det får bli 8/10. Något avdrag för att det kändes lite väl tilltaget.</p>
+
+<h4>Användare / lösenord</h4
+<p>admin / admin</p>
+<p>tompa / tompa</p>
+<p>anna / anna</p>
+<p>lotta / lotta</p>
 EOD;
 
 // Finally, leave it all to the rendering phase of Origo.

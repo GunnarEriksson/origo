@@ -170,6 +170,8 @@ EOD;
         $parts = explode('/', trim(substr($path, strlen($this->galleryPath) + 1), '/'));
         $breadcrumb = "<ul class='breadcrumb'>\n<li><a href='?'>Hem</a> »</li>\n";
 
+        var_dump($parts);
+
         if (!empty($parts[0])) {
             $combine = null;
             foreach($parts as $part) {
